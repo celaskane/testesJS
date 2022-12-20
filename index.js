@@ -394,8 +394,8 @@ const outro = new  String('oi'); */
 'primeira' mensagem`; */
 
 // Date
-const agora = new Date();
+/* const agora = new Date();
 const data1 = new Date('20 de dezembro de 2022, 10h30');
 const data2 = new Date(2022, 11, 20, 10);
 
-agora.setFullYear(2020);
+agora.setFullYear(2020); */
