@@ -1,9 +1,10 @@
-let precosValores = [
-    { marca: '$', dica: 'barato', minPorPessoa: 0, maxPorPessoa: 10 },
-    { marca: '$$', dica: 'moderado', minPorPessoa: 11, maxPorPessoa: 20 },
-    { marca: '$$$', dica: 'caro', minPorPessoa: 21, maxPorPessoa: 50 }
-];
+const numeros = arrayDoIntervalo(1, 4);
 
-let restaurantes = [
-    { mediaPorPessoa: 5 }
-];
+console.log('numeros', numeros);
+
+function arrayDoIntervalo(min, max) {
+    const saida = [];
+    for (let i = min; i <= max; i++)
+        saida.push(i);
+    return saida;
+}
