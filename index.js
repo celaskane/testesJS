@@ -1,10 +1,13 @@
 const numeros = [1, 2, 3, 4];
 
-console.log(includes(numeros, 3));
+const saida = excessao(numeros, [1]);
 
-function includes(array, elementoProcurado) {
+console.log('saida', saida);
+
+function excessao(array, excluido) {
+    const saida = [];
     for (let elemento of array)
-        if (elemento === elementoProcurado)
-            return true;
-    return false;
+        if (!excluido.includes(elemento))
+            saida.push(elemento);
+    return saida;
 }
