@@ -1,19 +1,18 @@
-const numeros = [1, 2, 3, 4, 1, 1];
+const numeros = [1, 2, 3, 4];
 
-const contagem = contaOcorrencias(numeros, 1);
+const max = getMax([]);
 
-console.log(contagem);
+console.log(max);
 
-function contaOcorrencias(array, procuraElemento) {
-    /* let contagem = 0
-    for (let elemento of array)
-        if (elemento === procuraElemento)
-            contagem++;
-    return contagem; */
+function getMax(array) {
+    if (array.length === 0) return undefined;
 
-    return array.reduce((acumulador, atual) => {
-        const ocorrencia = (atual === procuraElemento) ? 1 : 0;
-        console.log(acumulador, atual, procuraElemento);
-        return acumulador + ocorrencia;
-    }, 0);
+    /* let max = array[0];
+
+    for (let i = 1; i < array.length; i++)
+        if (array[i] > max)
+            max = array[i];
+    return max; */
+
+    array.reduce((acumulador, atual) => (atual > acumulador) ? acumulador : atual);
 }
