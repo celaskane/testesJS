@@ -1,10 +1,10 @@
-const numeros = arrayDoIntervalo(1, 4);
+const numeros = [1, 2, 3, 4];
 
-console.log('numeros', numeros);
+console.log(includes(numeros, 3));
 
-function arrayDoIntervalo(min, max) {
-    const saida = [];
-    for (let i = min; i <= max; i++)
-        saida.push(i);
-    return saida;
+function includes(array, elementoProcurado) {
+    for (let elemento of array)
+        if (elemento === elementoProcurado)
+            return true;
+    return false;
 }
