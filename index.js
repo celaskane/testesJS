@@ -399,3 +399,168 @@ const data1 = new Date('20 de dezembro de 2022, 10h30');
 const data2 = new Date(2022, 11, 20, 10);
 
 agora.setFullYear(2020); */
+
+
+//ARRAYS
+/* const numeros = [3, 4];
+//adicionando ao vinal da array
+numeros.push(5, 6);
+
+//adicionando ao comeco da array
+numeros.unshift(1, 2);
+
+//adicionando ao meio da array
+numeros.splice(2, 0, 'a', 'b');
+console.log('numeros', numeros); */
+
+//encontrando elementos na array (primitivos)
+/* const numeros = [1, 2, 3, 1, 4]
+console.log(numeros.indexOf(4));
+console.log(numeros.lastIndexOf(1));
+console.log(numeros.indexOf(1) !== -1);
+console.log(numeros.includes(1)); */
+
+//enconstrando elementos na array (objetos)
+/* const telas = [
+    { id: 1, nome: 'a' },
+    { id: 2, nome: 'b' }
+];
+const tela = telas.find(function(tela) {
+    return tela.nome === 'a';
+})
+console.log('tela', tela); */
+
+//Arrow Functions
+/* const telas = [
+    { id: 1, nome: 'a' },
+    { id: 2, nome: 'b' }
+];
+const tela = telas.find(tela => tela.nome === 'a');
+console.log('tela', tela); */
+
+//Removendo elementos 
+/* const numeros = [1, 2, 3, 4];
+
+//final
+const ultimo = numeros.pop();
+console.log('numeros', numeros);
+console.log('ultimo', ultimo);
+
+//inicio
+const primeiro = numeros.shift();
+console.log('primeiro', primeiro);
+
+//meio
+const meio = numeros.splice(2, 2);
+console.log('meio', numeros ); */
+
+//esvaziando uma array
+/* let numeros = [1, 2, 3, 4];
+let outro = numeros;
+
+numeros = [];
+
+numeros.length = 0;
+console.log('numeros', numeros);
+console.log('outro', outro);
+
+numeros.splice(0, numeros.length);
+
+while (numeros.length > 0)
+    numeros.pop(); */
+
+//combinando e fatiando arrays
+/* const primeiro = [1, 2, 3];
+const segundo = [4, 5, 6];
+
+const combinado = primeiro.concat(segundo);
+const fatia = combinado.slice(2, 4);
+
+console.log('combinado', combinado);
+console.log('fatia', fatia); */
+
+//operador spread
+/* const primeiro = [1, 2, 3];
+const segundo = [4, 5, 6];
+
+const combinado = [...primeiro, 'a', ...segundo, 'b'];
+const fatia = combinado.slice();
+
+console.log('combinado', combinado); */
+
+//Iterando uma array
+/* const numeros = [1, 2, 3];
+
+for (let numero of numeros)
+    console.log('numero', numero);
+
+numeros.forEach((numero, index) => console.log(index, numero)); */
+
+//joining arrays (bom para construir URL)
+/* const numeros = [1, 2, 3];
+const juntinho = numeros.join(',');
+console.log('juntinho', juntinho);
+
+const mensagem = 'Minha primeira mensagem';
+const partes = mensagem.split(' ');
+console.log('partes', partes);
+
+const combinado = partes.join('-');
+console.log('combinado', combinado); */
+
+//ordenando arrays
+/* const numeros = [2, 3, 1];
+numeros.sort();
+console.log('numeros', numeros);
+
+numeros.reverse();
+console.log('numeros', numeros);
+
+const telas = [
+    {id: 1, nome: 'Node.js'},
+    {id: 2, nome: 'JavaScript'},
+];
+
+telas.sort(function(a, b) {
+    const nomeA = a.nome.toUpperCase(); //case sensitve
+    const nomeB = b.nome.toUpperCase();
+    if (nomeA < nomeB) return -1;
+    if (nomeA < nomeB) return 1;
+    return 0;
+});
+
+console.log('telas', telas); */
+
+//testando elementos na array
+/* const numeros = [-1, 1, 2, 3];
+
+const peloMenosUmPositivo = numeros.some(valor =>  valor >= 0);
+
+console.log('peloMenosUmPositivo', peloMenosUmPositivo); */
+
+//filtrando array
+/* const numeros = [-1, 1, 2, 3];
+
+const filtrado = numeros.filter(valor => valor >= 0);
+
+console.log('filtrado', filtrado);
+ */
+
+//Mapping array IMPORTANTE
+/* const numeros = [-1, 1, 2, 3];
+
+const itens = numeros
+    .filter(valor => valor >= 0)
+    .map(valor => ({ valor: valor }))
+    .filter(obj => obj.valor >1)
+
+console.log(itens); */
+
+//reduzindo uma array
+/* const numeros = [-1, 1, 2, 3];
+
+const soma = numeros.reduce(
+    (acumulador, valorAtual) => acumulador + valorAtual
+);
+
+console.log('soma', soma); */
